@@ -17,7 +17,7 @@ function windows:Create(options)
     local GameName = options.Game
     game.StarterGui:SetCore("SendNotification", {
         Title = title,
-        Text = "Welcome To "..title..""..game.Players.LocalPlayer.Name.."!",
+        Text = "Welcome To "..title.." "..game.Players.LocalPlayer.Display.."!",
         Duration = 5,
         Logo = "rbxassetid://7072724538",
     })
@@ -260,7 +260,7 @@ function windows:Create(options)
         }):Play()
         game.StarterGui:SetCore("SendNotification", {
             Title = title,
-            Text = "UI Has Been Closed, Press Left Alt On Your Keyboard To ReOpen The GUI."
+            Text = "HydraWare V2 Has Been Closed Press V To Open It Back Up :)."
         })
     end)
 
