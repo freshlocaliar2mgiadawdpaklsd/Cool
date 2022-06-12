@@ -228,8 +228,8 @@ function boxBase:Update()
             self.Components.Name.Text = self.Name
             self.Components.Name.Color = color
             
-            self.Components.Distance.Visible = true
-            self.Components.Distance.Position = Vector2.new(TagPos.X, TagPos.Y + 14)
+            self.Components.Distance.Visible = false
+            self.Components.Distance.Position = Vector2.new(TagPos.X, TagPos.Y + 20)
             self.Components.Distance.Text = math.floor((cam.CFrame.p - cf.p).magnitude) .."m away"
             self.Components.Distance.Color = color
         else
@@ -300,14 +300,14 @@ function ESP:Add(obj, options)
 		Color = box.Color,
 		Center = true,
 		Outline = true,
-        Size = 19,
+        Size = 0,
         Visible = self.Enabled and self.Names
 	})
 	
 	box.Components["Tracer"] = Draw("Line", {
 		Thickness = ESP.Thickness,
 		Color = box.Color,
-        Transparency = 0,
+        Transparency = 0.4,
         Visible = self.Enabled and self.Tracers
     })
     self.Objects[obj] = box
